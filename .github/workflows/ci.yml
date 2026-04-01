@@ -27,7 +27,7 @@ jobs:
         run: npm ci
 
       - name: Install web dependencies
-        run: npm --prefix web ci
+        run: npm --prefix web install
 
       - name: Lint (strict)
         run: npm run lint:web
