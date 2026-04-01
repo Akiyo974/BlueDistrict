@@ -25,14 +25,14 @@ BlueDistrict est une expérience web immersive en 3D où chaque connexion, post 
 
 ## Stack technique
 
-| Couche       | Technologie                          |
-|--------------|--------------------------------------|
-| Frontend     | Next.js 16 (App Router, TypeScript)  |
-| 3D           | Three.js + @react-three/fiber + drei |
-| Postprocess  | @react-three/postprocessing          |
-| Auth         | Supabase Auth + LinkedIn OIDC        |
-| Styling      | Tailwind CSS                         |
-| DB           | Supabase (PostgreSQL)                |
+| Couche      | Technologie                          |
+| ----------- | ------------------------------------ |
+| Frontend    | Next.js 16 (App Router, TypeScript)  |
+| 3D          | Three.js + @react-three/fiber + drei |
+| Postprocess | @react-three/postprocessing          |
+| Auth        | Supabase Auth + LinkedIn OIDC        |
+| Styling     | Tailwind CSS                         |
+| DB          | Supabase (PostgreSQL)                |
 
 ---
 
@@ -95,6 +95,15 @@ BlueDistrict/
 ├── CONTRIBUTING.md
 └── CODE_OF_CONDUCT.md
 ```
+
+---
+
+## Documentation produit
+
+- [ROADMAP.md](ROADMAP.md)
+- [CHANGELOG.md](CHANGELOG.md)
+- [docs/auth-flow.md](docs/auth-flow.md)
+- [docs/run-local-3-minutes.md](docs/run-local-3-minutes.md)
 
 ---
 

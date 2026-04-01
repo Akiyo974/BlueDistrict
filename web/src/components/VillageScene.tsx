@@ -342,7 +342,12 @@ export default function VillageScene({ className, exploreMode = false }: Village
       className={`relative h-screen w-full overflow-hidden bg-[#060F1D] ${className ?? ""}`.trim()}
     >
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(76,201,255,0.25),rgba(0,0,0,0)_42%)]" />
-      <Canvas camera={{ position: [14, 12, 16], fov: 44 }} shadows dpr={[1, 1.7]} gl={{ antialias: true }}>
+      <Canvas
+        camera={{ position: [14, 12, 16], fov: 44 }}
+        shadows
+        dpr={[1, 1.7]}
+        gl={{ antialias: true }}
+      >
         <color attach="background" args={["#050B17"]} />
         <fog attach="fog" args={["#050B17", 12, 58]} />
 

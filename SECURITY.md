@@ -3,7 +3,7 @@
 ## Versions supportées
 
 | Version | Support sécurité |
-|---------|-----------------|
+| ------- | ---------------- |
 | `main`  | ✅ Oui           |
 
 ---

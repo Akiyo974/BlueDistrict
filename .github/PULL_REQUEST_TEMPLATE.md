@@ -15,6 +15,7 @@
 ## Issue liée
 
 <!-- Ferme automatiquement l'issue avec : Closes #XX -->
+
 Closes #
 
 ## Checklist
@@ -30,7 +31,7 @@ Closes #
 <!-- Avant / Après si applicable -->
 
 | Avant | Après |
-|-------|-------|
+| ----- | ----- |
 |       |       |
 
 ## Notes pour le reviewer

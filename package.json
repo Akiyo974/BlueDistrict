@@ -1,0 +1,26 @@
+{
+  "name": "bluedistrict",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Monorepo root for BlueDistrict project tooling",
+  "scripts": {
+    "prepare": "husky",
+    "lint:web": "npm --prefix web run lint:strict",
+    "format:check": "prettier --check \"**/*.{md,json,yml,yaml,ts,tsx,js,jsx,css,mjs}\"",
+    "format:write": "prettier --write \"**/*.{md,json,yml,yaml,ts,tsx,js,jsx,css,mjs}\"",
+    "test:web": "npm --prefix web run test"
+  },
+  "lint-staged": {
+    "web/**/*.{ts,tsx,js,jsx}": [
+      "npm --prefix web exec eslint -- --config web/eslint.config.mjs --max-warnings=0"
+    ],
+    "**/*.{md,json,yml,yaml,css}": [
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
+    "prettier": "^3.8.1"
+  }
+}

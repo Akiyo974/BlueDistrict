@@ -2,8 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { Bell, House, LogIn, LogOut, Sparkles, Users, X } from "lucide-react";
+import Image from "next/image";
 import VillageScene from "@/components/VillageScene";
 import { createClient } from "@/lib/supabase";
+import { getDisplayName, getHeadline } from "@/lib/userProfile";
 import type { User } from "@supabase/supabase-js";
 
 export default function Home() {
@@ -44,14 +46,15 @@ export default function Home() {
     setExploreMode(false);
   };
 
-  const displayName =
-    user?.user_metadata?.full_name ??
-    user?.user_metadata?.name ??
-    user?.email ??
-    "Utilisateur";
-  const avatarUrl =
-    user?.user_metadata?.avatar_url ?? user?.user_metadata?.picture ?? null;
-  const headline = user?.user_metadata?.headline ?? user?.email ?? "";
+  const displayName = getDisplayName({
+    ...(user?.user_metadata ?? {}),
+    email: user?.email,
+  });
+  const avatarUrl = user?.user_metadata?.avatar_url ?? user?.user_metadata?.picture ?? null;
+  const headline = getHeadline({
+    ...(user?.user_metadata ?? {}),
+    email: user?.email,
+  });
 
   return (
     <main className="relative h-screen w-full overflow-hidden">
@@ -93,8 +96,8 @@ export default function Home() {
                 LinkedIn Village
               </h1>
               <p className="mt-3 max-w-3xl text-sm text-[#C3E0FF] md:text-lg">
-                Ville en plein ecran + interface superposee. Ton reseau alimente la
-                progression de ta skyline en direct.
+                Ville en plein ecran + interface superposee. Ton reseau alimente la progression de
+                ta skyline en direct.
               </p>
 
               <div className="mt-5 flex flex-wrap items-center gap-3">
@@ -166,11 +169,14 @@ export default function Home() {
             <div className="mt-3 space-y-3">
               <div className="flex items-center gap-3 rounded-xl border border-[#2B527A] bg-[#0A1D38]/80 p-3">
                 {avatarUrl ? (
-                  <img
+                  <Image
                     src={avatarUrl}
                     alt={displayName}
                     className="h-10 w-10 rounded-full object-cover"
                     referrerPolicy="no-referrer"
+                    width={40}
+                    height={40}
+                    unoptimized
                   />
                 ) : (
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#0A66C2] font-bold text-white">

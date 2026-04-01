@@ -91,16 +91,16 @@ type(scope): description courte en français ou anglais
 
 ### Types autorisés
 
-| Type       | Usage                                               |
-|------------|-----------------------------------------------------|
-| `feat`     | Nouvelle fonctionnalité                             |
-| `fix`      | Correction de bug                                   |
-| `perf`     | Amélioration de performance                         |
-| `refactor` | Refactoring sans changement de comportement         |
-| `style`    | Formatage, espaces (pas de logique)                 |
-| `docs`     | Documentation uniquement                            |
-| `test`     | Ajout ou correction de tests                        |
-| `chore`    | Tâches de maintenance (deps, config, CI)            |
+| Type       | Usage                                       |
+| ---------- | ------------------------------------------- |
+| `feat`     | Nouvelle fonctionnalité                     |
+| `fix`      | Correction de bug                           |
+| `perf`     | Amélioration de performance                 |
+| `refactor` | Refactoring sans changement de comportement |
+| `style`    | Formatage, espaces (pas de logique)         |
+| `docs`     | Documentation uniquement                    |
+| `test`     | Ajout ou correction de tests                |
+| `chore`    | Tâches de maintenance (deps, config, CI)    |
 
 ### Exemples
 
@@ -117,6 +117,7 @@ docs(readme): mettre à jour les instructions d'installation
 Utilise le [template Bug Report](.github/ISSUE_TEMPLATE/bug_report.md) sur GitHub Issues.
 
 Inclus toujours :
+
 - Version de Node.js et OS
 - Étapes pour reproduire
 - Comportement attendu vs observé
@@ -129,6 +130,7 @@ Inclus toujours :
 Utilise le [template Feature Request](.github/ISSUE_TEMPLATE/feature_request.md).
 
 Décris :
+
 - Le problème que la fonctionnalité résout
 - La solution envisagée
 - Les alternatives considérées
